@@ -1,4 +1,4 @@
-Picking an Interpreter
+Выбор интерпретатора
 ======================
 
 .. _which-python:
@@ -6,9 +6,8 @@ Picking an Interpreter
 The State of Python (2 vs 3)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When choosing a Python interpreter, one looming question is always present:
-"Should I choose Python 2 or Python 3"? The answer is not as obvious as
-one might think.
+Во время выбора интерпретатора всегда встает один вопрос:
+"Какую версию Python мне выбрать, 2 или 3"? И ответ на него вовсе не столь очевиден, как может показаться.
 
 
 The basic gist of the state of things is as follows:
