@@ -1,4 +1,4 @@
-Выбор интерпретатора
+Выбор версии интерпретатора
 ======================
 
 .. _which-python:
@@ -7,50 +7,48 @@ The State of Python (2 vs 3)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Во время выбора интерпретатора всегда встает один вопрос:
-"Какую версию Python мне выбрать, 2 или 3"? И ответ на него вовсе не столь очевиден, как может показаться.
+"Какую версию Python мне выбрать: 2 или 3"?
+И ответ на него вовсе не столь очевиден, как может показаться.
 
 
-The basic gist of the state of things is as follows:
+Вот несколько ключевых моментов:
 
-1. Python 2.7 has been the standard for a *long* time.
-2. Python 3 introduced major changes to the language, which many developers are unhappy with.
-3. Python 2.7 will receive necessary security updates until 2020 [#pep373_eol]_.
-4. Python 3 is continually evolving, like Python 2 did in years past.
+1. Python 2.7 был стандартом в течении *длительного* времени.
+2. В Python 3 были внесены существенные изменения, понравившиеся далеко не всем.
+3. Python 2.7 будет получать исправления критических уязвимостей вплоть до 2020 [#pep373_eol]_.
+4. Python 3 непрерывно развивается, так же, как и Python 2 в прошлом.
 
-So, you can now see why this is not such an easy decision.
+Итак, теперь вы понимаете, почему это непростой выбор.
 
 
-Recommendations
+Рекомендации
 ~~~~~~~~~~~~~~~
 
-I'll be blunt:
+Скажу прямо:
 
 
-**Use Python 3 if...**
+**Выбирайте Python 3, если...**
 
-- You don't care.
-- You love Python 3.
-- You are indifferent towards 2 vs 3.
-- You don't know which one to use.
-- You embrace change.
+- Вам все равно.
+- Вам нравится Python 3.
+- Не видете разницы между 2 и 3 версией.
+- Не знаете что выбрать.
+- Вы не сопротивляетесь переменам.
 
-**Use Python 2 if...**
+**Или Python 2, если...**
 
-- You love Python 2 and are saddened by the future being Python 3.
-- The stability requirements of your software would be improved by a language and runtime that never changes.
-- Software that you depend on requires it.
+- Вам нравится Python 2 и не нравится путь развития Python 3.
+- Для вас важно, что синтаксис языка и его среда выполнения никогда не изменятся.
+- Этого требует программное обеспечение, от которого вы зависите.
 
 
-So.... 3?
+И все же.... 3?
 ~~~~~~~~~
 
-If you're choosing a Python interpreter to use, and aren't opinionated, then I
-recommend you use the newest Python 3.x, since every version brings new and
-improved standard library modules, security and bug fixes. Progress is progress.
+Если вы все еще не смогли определиться с версией интерпретатора,
+то в таком случае я советую остановиться на последней версии Python 3.x, поскольку каждый релиз приносит новые возможности, улучшение существующих библиотек и исправление ошибок. Прогресс неумолим.
 
-Given such, only use Python 2 if you have a strong reason to, such as a Python 2
-exclusive library which has no adequate Python 3 ready alternative, or you
-(like me) absolutely love and are inspired by Python 2.
+Таким образом, используйте Python 2, если у вас есть действитель веская причина, например: использование важной библиотеки, которая не портирована на Python 3, либо вы, как и я, абсолютный фанат Python 2.
 
 Check out `Can I Use Python 3? <https://caniusepython3.com/>`_ to see if any
 software you're depending on will block your adoption of Python 3.
