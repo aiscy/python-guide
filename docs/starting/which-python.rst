@@ -48,69 +48,54 @@ The State of Python (2 vs 3)
 Если вы все еще не смогли определиться с версией интерпретатора,
 то в таком случае я советую остановиться на последней версии Python 3.x, поскольку каждый релиз приносит новые возможности, улучшение существующих библиотек и исправление ошибок. Прогресс неумолим.
 
-Таким образом, используйте Python 2, если у вас есть действитель веская причина, например: использование важной библиотеки, которая не портирована на Python 3, либо вы, как и я, абсолютный фанат Python 2.
+Таким образом, используйте Python 2, если у вас есть действительно веская причина, например: использование важной библиотеки, которая не портирована на Python 3, либо вы, как и я, абсолютный фанат Python 2.
 
-Check out `Can I Use Python 3? <https://caniusepython3.com/>`_ to see if any
-software you're depending on will block your adoption of Python 3.
+На сайте `Can I Use Python 3? <https://caniusepython3.com/>`_ вы можете проверить, поддерживает ли нужная вам библиотека Python 3.
 
-`Further Reading <http://wiki.python.org/moin/Python2orPython3>`_
+`Подробнее о различиях между 2 и 3 версией <http://wiki.python.org/moin/Python2orPython3>`_
 
-It is possible to `write code that works on Python 2.6, 2.7, and Python 3
-<https://docs.python.org/3/howto/pyporting.html>`_. This
-ranges from trivial to hard depending upon the kind of software
-you are writing; if you're a beginner there are far more important things to
-worry about.
+Так же стоит упомянуть о возможности `писать код, который будет совместим с 2.6, 2.7, и 3.x
+<https://docs.python.org/3/howto/pyporting.html>`_. Усилия, которые необходимо приложить для обеспечения совместимости, варьируются от
+типа программного обеспечения, которое вы пишите.
+Если вы новичок, то есть множество более важных вещей, о которых следует беспокоиться.
 
-Implementations
+Различные реализации интерпретатора
 ~~~~~~~~~~~~~~~
 
-When people speak of *Python* they often mean not just the language but also
-the CPython implementation. *Python* is actually a specification for a language
-that can be implemented in many different ways.
+Когда кто-то говорит о *Python*,  обычно подразумевается не только сам язык, но и его реализация 
+на интерпретаторе CPython. *Python* это скорее спецификация языка, которая может быть реализована множеством способов.
 
 CPython
 -------
 
-`CPython <http://www.python.org>`_ is the reference implementation of Python,
-written in C. It compiles Python code to intermediate bytecode which is then
-interpreted by a virtual machine. CPython provides the highest
-level of compatibility with Python packages and C extension modules.
+`CPython <http://www.python.org>`_ является эталонной реализацией языка Python,
+интерпретатор написан на C. Он компилирует исходный код программы в промежуточный байт-код, который затем интерпретируется виртуальной машиной. CPython обеспечивает высочайшую совместимость с Python-пакетами и расширениями, написанными на C.
 
-If you are writing open-source Python code and want to reach the widest possible
-audience, targeting CPython is best. To use packages which rely on C extensions
-to function, CPython is your only implementation option.
+Если вы пишите программу с открытым исходным кодом и хотите охватить максимально широкую аудиторию, то CPython будет лучшим выбором. Если необходимо использовать библиотеки, написанные на C, то CPython является единственным вариантом.
 
-All versions of the Python language are implemented in C because CPython is the
-reference implementation.
+Все версии языка Python реализованы на C, потому что CPython является эталонной реализацией.
 
 PyPy
 ----
 
-`PyPy <http://pypy.org/>`_ is a Python interpreter implemented in a restricted
-statically-typed subset of the Python language called RPython. The interpreter
-features a just-in-time compiler and supports multiple back-ends (C, CLI, JVM).
+`PyPy <http://pypy.org/>`_ это интерпретатор Python, реализованный в ограниченном
+статически типизированное подмножестве языка Python - RPython. Из особенностей стоит отметить JIT компиляцию и поддержку множества бэкендов (C, CLI, JVM).
 
-PyPy aims for maximum compatibility with the reference CPython implementation
-while improving performance.
+PyPy стремится к максимальной совместимости с CPython, ускорив при этом выполнение кода.
 
-If you are looking to increase performance of your Python code, it's
-worth giving PyPy a try. On a suite of benchmarks, it's currently `over 5 times
-faster than CPython <http://speed.pypy.org/>`_.
+Если вы ищете способ увеличить производительность вашего кода, то стоит попробовать PyPy. Основываясь на показаниях бенчмарков, он примерно  `5 раз быстрее, чем CPython <http://speed.pypy.org/>`_.
 
-PyPy supports Python 2.7. PyPy3 [#pypy_ver]_, released in beta, targets Python 3.
+PyPy на данный момент поддерживает Python 2.7. PyPy3 [#pypy_ver]_, нацелен на Python 3, но пока находится в бете.
 
 Jython
 ------
 
-`Jython <http://www.jython.org/>`_ is a Python implementation that compiles
-Python code to Java bytecode which is then executed by the JVM (Java Virtual Machine).
-Additionally, it is able to import and use any Java class like a Python
-module.
+`Jython <http://www.jython.org/>`_ это реализация Python, которая компилирует
+Python код в байт-код Java, который затем выполняет JVM (Java Virtual Machine).
+Кроме того, есть возможность импортировать и использовать любой Java-класс, как модуль языка Python.
 
-If you need to interface with an existing Java codebase or have other reasons to
-need to write Python code for the JVM, Jython is the best choice.
-
-Jython currently supports up to Python 2.7. [#jython_ver]_
+Если вам нужно взаимодействовать с уже существующим кодом Java, или есть другие причины писать Python код для JVM, то Jython будет хорошим выбором.
+Jython на текущий момент поддерживает версию Python 2.7. [#jython_ver]_
 
 IronPython
 ----------
